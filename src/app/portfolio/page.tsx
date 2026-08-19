@@ -17,7 +17,7 @@ export default function PortfolioPage() {
       features: language === 'fa' 
         ? ["داشبورد آموزشی", "حضور و غیاب", "کارنامه با QR Code", "ماژول خوابگاه و کارآموزی با موقعیت‌یاب"] 
         : ["Academic dashboard", "Attendance tracking", "Transcripts with QR code", "Hostel/Internship modules with GPS check-in"],
-      img: "/img/1.jpg",
+      img: "/images/1.jpg",
     },
     {
       title: language === 'fa' ? "پلتفرم آموزشی Study Forge" : "Study Forge AI Learning Platform",
@@ -27,7 +27,7 @@ export default function PortfolioPage() {
       features: language === 'fa' 
         ? ["معلم هوش مصنوعی", "تولید فلش‌کارت و آزمون", "برنامه‌ریز هوشمند", "پیگیری معدل", "حالت تمرکز و تحلیل‌ها"] 
         : ["AI tutor", "Flashcard/quiz generation", "Smart planner", "CGPA tracker", "Focus mode & analytics"],
-      img: "/img/2.jpg",
+      img: "/images/2.jpg",
       link: "https://suforg.netlify.app"
     }
   ];

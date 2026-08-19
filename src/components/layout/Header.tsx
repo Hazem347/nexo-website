@@ -42,7 +42,7 @@ export default function Header() {
         {/* Logo */}
         <Link href="/" className="relative z-50 flex items-center">
           <Image
-            src="/img/logo1.png" 
+            src="/images/logo1.png" 
             alt="Nexo Logo"
             width={80}
             height={30}

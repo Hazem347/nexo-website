@@ -31,7 +31,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Brand */}
           <div className="space-y-6">
-            <Image src="/img/logo1.png" alt="Nexo Logo" width={140} height={45} className="rounded-lg object-contain" />
+            <Image src="/images/logo1.png" alt="Nexo Logo" width={140} height={45} className="rounded-lg object-contain" />
             <p className="text-white/60 text-sm leading-relaxed max-w-xs">
               {t.hero.subtitle}
             </p>

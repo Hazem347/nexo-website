@@ -23,7 +23,7 @@ export default function Home() {
       
       {/* Final CTA Inline for simplicity */}
       <section className="py-32 bg-gold relative overflow-hidden text-navy-900 text-center">
-        <div className="absolute inset-0 opacity-10 bg-[url('/img/logo1.png')] bg-no-repeat bg-center bg-[length:150%_150%] mix-blend-overlay"></div>
+        <div className="absolute inset-0 opacity-10 bg-[url('/images/logo1.png')] bg-no-repeat bg-center bg-[length:150%_150%] mix-blend-overlay"></div>
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-black mb-6 leading-tight">
             {language === 'fa' ? "آماده شروع پروژه خود هستید؟" : "Ready to start your project?"}

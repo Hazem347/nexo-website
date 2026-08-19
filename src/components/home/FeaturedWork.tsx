@@ -56,7 +56,7 @@ export default function FeaturedWork() {
       desc: language === 'fa' 
         ? "یک پلتفرم جامع آموزشی با رابط کاربری اختصاصی برای دانشجویان، شامل سیستم حضور و غیاب، کارنامه دیجیتال و نقشه یکپارچه." 
         : "A comprehensive academic platform with a premium UI for students, featuring attendance tracking, digital transcripts, and integrated maps.",
-      img: "/img/1.jpg",
+      img: "/images/1.jpg",
       link: "/portfolio",
       reverse: false
     },
@@ -66,7 +66,7 @@ export default function FeaturedWork() {
       desc: language === 'fa' 
         ? "یک پلتفرم نوین یادگیری مبتنی بر هوش مصنوعی با امکاناتی نظیر تولید فلش‌کارت، برنامه‌ریز هوشمند و پیگیری معدل دانشجویی." 
         : "An innovative AI-powered learning platform with flashcard generation, smart planner, and CGPA tracking.",
-      img: "/img/2.jpg",
+      img: "/images/2.jpg",
       link: "/portfolio",
       reverse: true
     }

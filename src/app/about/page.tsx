@@ -63,7 +63,7 @@ export default function AboutPage() {
                    <div className="w-40 h-40 bg-white/20 rounded-full blur-2xl animate-pulse delay-100 opacity-50"></div>
                  </div>
                  <div className="absolute inset-0 flex items-center justify-center">
-                    <Image src="/img/logo1.png" alt="Nexo Logo" width={200} height={80} className="rounded-lg drop-shadow-[0_0_15px_rgba(255,255,255,0.2)]" />
+                    <Image src="/images/logo1.png" alt="Nexo Logo" width={200} height={80} className="rounded-lg drop-shadow-[0_0_15px_rgba(255,255,255,0.2)]" />
                  </div>
                </div>
             </div>
