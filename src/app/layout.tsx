@@ -22,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fa" dir="rtl" suppressHydrationWarning>
-      <body className={`${outfit.variable} ${vazirmatn.variable} font-sans bg-[var(--background)] text-[var(--foreground)] min-h-screen flex flex-col antialiased selection:bg-gold/30 selection:text-white`}>
+      <body className={`${outfit.variable} ${vazirmatn.variable} font-sans bg-[var(--background)] text-[var(--foreground)] min-h-screen flex flex-col antialiased selection:bg-gold/30 selection:text-white overflow-x-hidden`}>
         <LanguageProvider>
           <LenisProvider>
             <Header />
