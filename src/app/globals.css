@@ -30,6 +30,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
 body[dir="rtl"] {
   font-family: var(--font-vazirmatn), var(--font-outfit), sans-serif;
 }

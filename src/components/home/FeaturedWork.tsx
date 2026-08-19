@@ -73,7 +73,7 @@ export default function FeaturedWork() {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-navy-900 relative z-10">
+    <section className="py-16 md:py-24 bg-navy-900 relative z-10 overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 md:px-12">
         <div className="text-center mb-20">
           <motion.h2 

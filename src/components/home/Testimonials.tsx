@@ -37,13 +37,13 @@ export default function Testimonials() {
         </div>
 
         <div className="max-w-4xl mx-auto relative">
-          <div className="absolute top-1/2 -left-2 sm:-left-4 md:-left-12 -translate-y-1/2 z-20">
-            <button onClick={dir === 'rtl' ? next : prev} className="w-10 h-10 md:w-12 md:h-12 rounded-full glass flex items-center justify-center hover:bg-gold hover:text-navy-900 transition-colors">
+          <div className="absolute top-1/2 left-0 sm:-left-4 md:-left-12 -translate-y-1/2 z-20">
+            <button onClick={dir === 'rtl' ? next : prev} className="w-10 h-10 md:w-12 md:h-12 rounded-full glass flex items-center justify-center hover:bg-gold hover:text-navy-900 transition-colors shadow-lg">
               <ChevronLeft size={20} className="md:w-6 md:h-6" />
             </button>
           </div>
-          <div className="absolute top-1/2 -right-2 sm:-right-4 md:-right-12 -translate-y-1/2 z-20">
-            <button onClick={dir === 'rtl' ? prev : next} className="w-10 h-10 md:w-12 md:h-12 rounded-full glass flex items-center justify-center hover:bg-gold hover:text-navy-900 transition-colors">
+          <div className="absolute top-1/2 right-0 sm:-right-4 md:-right-12 -translate-y-1/2 z-20">
+            <button onClick={dir === 'rtl' ? prev : next} className="w-10 h-10 md:w-12 md:h-12 rounded-full glass flex items-center justify-center hover:bg-gold hover:text-navy-900 transition-colors shadow-lg">
               <ChevronRight size={20} className="md:w-6 md:h-6" />
             </button>
           </div>
