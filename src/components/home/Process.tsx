@@ -22,14 +22,14 @@ export default function Process() {
   ];
 
   return (
-    <section className="py-24 bg-navy-800 relative z-10 border-t border-white/5 overflow-hidden">
-      <div className="container mx-auto px-6 md:px-12">
+    <section className="py-16 md:py-24 bg-navy-800 relative z-10 border-t border-white/5 overflow-hidden">
+      <div className="container mx-auto px-4 sm:px-6 md:px-12">
         <div className="text-center mb-20">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-5xl font-bold mb-4"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4"
           >
             {language === 'fa' ? <>فرآیند <span className="text-gold">کاری</span> ما</> : <>Our <span className="text-gold">Process</span></>}
           </motion.h2>
@@ -38,7 +38,7 @@ export default function Process() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-white/60 max-w-2xl mx-auto"
+            className="text-white/60 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed"
           >
             {language === 'fa' 
               ? "مسیر ۵ مرحله‌ای ما برای تبدیل ایده شما به یک محصول دیجیتال موفق و ماندگار." 
@@ -58,7 +58,7 @@ export default function Process() {
             />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-8 relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-12 sm:gap-8 md:gap-4 lg:gap-8 relative z-10">
             {steps.map((step, idx) => (
               <motion.div 
                 key={idx}
@@ -68,14 +68,14 @@ export default function Process() {
                 transition={{ duration: 0.5, delay: idx * 0.2 }}
                 className="flex flex-col items-center text-center group"
               >
-                <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-navy-900 border-2 border-gold flex items-center justify-center mb-6 shadow-[0_0_15px_rgba(212,175,55,0.2)] group-hover:shadow-[0_0_25px_rgba(212,175,55,0.6)] group-hover:scale-110 transition-all duration-300 text-gold relative z-10">
+                <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-navy-900 border-2 border-gold flex items-center justify-center mb-4 sm:mb-6 shadow-[0_0_15px_rgba(212,175,55,0.2)] group-hover:shadow-[0_0_25px_rgba(212,175,55,0.6)] group-hover:scale-110 transition-all duration-300 text-gold relative z-10">
                   {step.icon}
-                  <div className="absolute -top-3 -right-3 w-6 h-6 rounded-full bg-white text-navy-900 flex items-center justify-center text-xs font-bold font-mono shadow-md">
+                  <div className="absolute -top-2 -right-2 md:-top-3 md:-right-3 w-6 h-6 rounded-full bg-white text-navy-900 flex items-center justify-center text-xs font-bold font-mono shadow-md">
                     {idx + 1}
                   </div>
                 </div>
-                <h3 className="text-xl font-bold mb-3">{step.title}</h3>
-                <p className="text-white/50 text-sm leading-relaxed">{step.desc}</p>
+                <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">{step.title}</h3>
+                <p className="text-white/50 text-[13px] sm:text-sm leading-relaxed">{step.desc}</p>
               </motion.div>
             ))}
           </div>

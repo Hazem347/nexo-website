@@ -97,7 +97,7 @@ export default function Header() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="absolute top-full left-0 right-0 glass border-t border-white/10 p-6 flex flex-col gap-4 shadow-2xl md:hidden"
+            className="absolute top-full left-0 right-0 glass border-t border-white/10 p-6 flex flex-col gap-4 shadow-2xl md:hidden max-h-[85vh] overflow-y-auto"
           >
             {navLinks.map((link) => (
               <Link
@@ -112,7 +112,7 @@ export default function Header() {
             <div className="flex items-center justify-between mt-4 pt-4 border-t border-white/10">
               <button
                 onClick={toggleLanguage}
-                className="flex items-center gap-2 px-4 py-2 rounded-full border border-white/20 bg-white/5"
+                className="flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full border border-white/20 bg-white/5 text-sm sm:text-base"
               >
                 <span className={language === "fa" ? "text-gold font-bold" : "text-white/60"}>دری</span>
                 <span className="text-white/30">|</span>
@@ -120,7 +120,7 @@ export default function Header() {
               </button>
               <Link
                 href="/contact"
-                className="px-6 py-2 rounded-full bg-gold text-navy-900 font-bold"
+                className="px-4 sm:px-6 py-2 rounded-full bg-gold text-navy-900 font-bold text-sm sm:text-base text-center"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {t.common.getQuote}

@@ -33,13 +33,13 @@ export default function PricingPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   return (
-    <div className="pt-32 pb-24 relative z-10 bg-navy-900 min-h-screen">
-      <div className="container mx-auto px-6 md:px-12">
+    <div className="pt-24 md:pt-32 pb-16 md:pb-24 relative z-10 bg-navy-900 min-h-screen">
+      <div className="container mx-auto px-4 sm:px-6 md:px-12">
         <div className="text-center mb-20 max-w-3xl mx-auto">
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-4xl md:text-6xl font-black mb-6"
+            className="text-3xl sm:text-4xl md:text-6xl font-black mb-4 sm:mb-6"
           >
             {t.pricing.title}
           </motion.h1>
@@ -47,20 +47,20 @@ export default function PricingPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-white/60 text-lg md:text-xl"
+            className="text-white/60 text-base md:text-xl"
           >
             {t.pricing.subtitle}
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-32">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-16 md:mb-32">
           {tiers.map((tier, i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className={`relative rounded-3xl p-8 flex flex-col transition-transform duration-300 hover:-translate-y-2 ${
+              className={`relative rounded-3xl p-6 sm:p-8 flex flex-col transition-transform duration-300 hover:-translate-y-2 ${
                 tier.popular 
                   ? "bg-navy-800 border-2 border-gold shadow-[0_10px_40px_rgba(212,175,55,0.15)]" 
                   : "glass border-transparent hover:border-white/10"
@@ -110,8 +110,8 @@ export default function PricingPage() {
 
         {/* FAQ Section */}
         <div className="max-w-3xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">{language === 'fa' ? 'سوالات متداول' : 'Frequently Asked Questions'}</h2>
+          <div className="text-center mb-8 md:mb-12">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4">{language === 'fa' ? 'سوالات متداول' : 'Frequently Asked Questions'}</h2>
           </div>
           <div className="space-y-4">
             {faqs.map((faq, i) => (

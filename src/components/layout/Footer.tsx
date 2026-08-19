@@ -26,9 +26,9 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-navy-900 border-t border-white/10 pt-20 pb-10">
-      <div className="container mx-auto px-6 md:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+    <footer className="bg-navy-900 border-t border-white/10 pt-12 md:pt-20 pb-8 md:pb-10">
+      <div className="container mx-auto px-4 sm:px-6 md:px-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 mb-12 md:mb-16">
           {/* Brand */}
           <div className="space-y-6">
             <Image src="/images/logo1.png" alt="Nexo Logo" width={140} height={45} className="rounded-lg object-contain" />
@@ -96,9 +96,9 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className={`border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/40 ${dir === 'rtl' ? 'flex-row-reverse' : ''}`}>
+        <div className={`border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-[13px] sm:text-sm text-white/40 text-center md:text-start ${dir === 'rtl' ? 'md:flex-row-reverse' : ''}`}>
           <p>&copy; {currentYear} NEXO Digital Agency. All rights reserved.</p>
-          <div className="flex gap-6">
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
             <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>
             <Link href="#" className="hover:text-white transition-colors">Terms of Service</Link>
           </div>

@@ -18,14 +18,14 @@ export default function PricingPreview() {
   ];
 
   return (
-    <section className="py-24 bg-navy-900 relative z-10">
-      <div className="container mx-auto px-6 md:px-12">
+    <section className="py-16 md:py-24 bg-navy-900 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 md:px-12">
         <div className="text-center mb-16">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-5xl font-bold mb-4"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4"
           >
             {t.pricing.title}
           </motion.h2>
@@ -34,13 +34,13 @@ export default function PricingPreview() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-white/60 max-w-2xl mx-auto"
+            className="text-white/60 text-sm sm:text-base max-w-2xl mx-auto"
           >
             {t.pricing.subtitle}
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
           {tiers.map((tier, i) => (
             <motion.div
               key={i}
@@ -48,7 +48,7 @@ export default function PricingPreview() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className={`relative rounded-3xl p-8 transition-transform duration-300 hover:-translate-y-2 ${
+              className={`relative rounded-3xl p-6 sm:p-8 transition-transform duration-300 hover:-translate-y-2 ${
                 tier.popular 
                   ? "bg-navy-800 border-2 border-gold shadow-[0_10px_40px_rgba(212,175,55,0.15)]" 
                   : "glass border-transparent hover:border-white/10"
@@ -65,10 +65,10 @@ export default function PricingPreview() {
                 <p className="text-white/50 text-sm min-h-[40px]">{tier.data.desc}</p>
               </div>
 
-              <div className="mb-8 flex flex-col gap-1">
+              <div className="mb-6 sm:mb-8 flex flex-col gap-1">
                 <div className="flex items-baseline gap-2">
-                  <span className="text-4xl font-extrabold text-gold">{tier.price}</span>
-                  <span className="text-white/60">افغانی</span>
+                  <span className="text-3xl sm:text-4xl font-extrabold text-gold">{tier.price}</span>
+                  <span className="text-white/60 text-sm sm:text-base">افغانی</span>
                 </div>
                 <span className="text-sm text-white/40">{tier.usd}</span>
               </div>

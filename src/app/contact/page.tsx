@@ -10,13 +10,13 @@ export default function ContactPage() {
   const t = getDictionary(language);
 
   return (
-    <div className="pt-32 pb-24 relative z-10 bg-navy-900 min-h-screen">
-      <div className="container mx-auto px-6 md:px-12">
+    <div className="pt-24 md:pt-32 pb-16 md:pb-24 relative z-10 bg-navy-900 min-h-screen">
+      <div className="container mx-auto px-4 sm:px-6 md:px-12">
         <div className="text-center mb-16">
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-4xl md:text-6xl font-black mb-4"
+            className="text-3xl sm:text-4xl md:text-6xl font-black mb-4"
           >
             {language === 'fa' ? <>تماس با <span className="text-gold">ما</span></> : <>Contact <span className="text-gold">Us</span></>}
           </motion.h1>
@@ -24,7 +24,7 @@ export default function ContactPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-white/60 text-lg md:text-xl max-w-2xl mx-auto"
+            className="text-white/60 text-base md:text-xl max-w-2xl mx-auto"
           >
             {language === 'fa' 
               ? "آماده شروع یک پروژه خارق‌العاده هستید؟ برای مشاوره رایگان با ما در ارتباط باشید. ما در سریع‌ترین زمان ممکن پاسخگوی شما خواهیم بود." 
@@ -40,30 +40,30 @@ export default function ContactPage() {
             transition={{ duration: 0.6 }}
             className="w-full lg:w-5/12 space-y-8"
           >
-            <div className="glass p-8 rounded-3xl h-full flex flex-col justify-between">
+            <div className="glass p-6 sm:p-8 rounded-3xl h-full flex flex-col justify-between">
               <div>
-                <h3 className="text-2xl font-bold mb-8">
+                <h3 className="text-xl sm:text-2xl font-bold mb-6 sm:mb-8">
                   {language === 'fa' ? "ارتباط مستقیم (واتساپ)" : "Direct Contact (WhatsApp)"}
                 </h3>
                 
                 <div className="space-y-4 mb-10">
-                  <a href="https://wa.me/93700551228" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-4 rounded-2xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-gold/50 transition-all group">
-                    <div className="w-12 h-12 rounded-full bg-gold/20 text-gold flex items-center justify-center group-hover:scale-110 transition-transform">
-                      <MessageCircle size={24} />
+                  <a href="https://wa.me/93700551228" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 rounded-2xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-gold/50 transition-all group">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gold/20 text-gold flex items-center justify-center group-hover:scale-110 transition-transform shrink-0">
+                      <MessageCircle size={20} className="sm:w-6 sm:h-6" />
                     </div>
                     <div>
-                      <p className="font-bold text-lg">{language === 'fa' ? "واتساپ افغانستان" : "WhatsApp (Afghanistan)"}</p>
-                      <p className="text-white/60 text-sm font-mono">+93 70 055 1228</p>
+                      <p className="font-bold text-base sm:text-lg">{language === 'fa' ? "واتساپ افغانستان" : "WhatsApp (Afghanistan)"}</p>
+                      <p className="text-white/60 text-[13px] sm:text-sm font-mono">+93 70 055 1228</p>
                     </div>
                   </a>
 
-                  <a href="https://wa.me/923290335528" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-4 rounded-2xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-gold/50 transition-all group">
-                    <div className="w-12 h-12 rounded-full bg-gold text-navy-900 flex items-center justify-center group-hover:scale-110 transition-transform shadow-[0_0_15px_rgba(212,175,55,0.4)]">
-                      <MessageCircle size={24} />
+                  <a href="https://wa.me/923290335528" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 rounded-2xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-gold/50 transition-all group">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gold text-navy-900 flex items-center justify-center group-hover:scale-110 transition-transform shadow-[0_0_15px_rgba(212,175,55,0.4)] shrink-0">
+                      <MessageCircle size={20} className="sm:w-6 sm:h-6" />
                     </div>
                     <div>
-                      <p className="font-bold text-lg text-gold">{language === 'fa' ? "واتساپ مستقیم" : "WhatsApp (Direct)"}</p>
-                      <p className="text-white/60 text-sm font-mono">+92 329 033 5528</p>
+                      <p className="font-bold text-base sm:text-lg text-gold">{language === 'fa' ? "واتساپ مستقیم" : "WhatsApp (Direct)"}</p>
+                      <p className="text-white/60 text-[13px] sm:text-sm font-mono">+92 329 033 5528</p>
                     </div>
                   </a>
                 </div>
@@ -89,10 +89,10 @@ export default function ContactPage() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="w-full lg:w-7/12"
           >
-            <div className="glass p-8 md:p-12 rounded-3xl shadow-[0_0_40px_rgba(0,0,0,0.3)] border border-white/10 relative overflow-hidden">
+            <div className="glass p-6 sm:p-8 md:p-12 rounded-3xl shadow-[0_0_40px_rgba(0,0,0,0.3)] border border-white/10 relative overflow-hidden">
               <div className="absolute top-0 right-0 w-64 h-64 bg-gold/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
               
-              <h3 className="text-2xl font-bold mb-8">
+              <h3 className="text-xl sm:text-2xl font-bold mb-6 sm:mb-8">
                 {language === 'fa' ? "ارسال پیام" : "Send us a Message"}
               </h3>
               

@@ -29,15 +29,15 @@ export default function ServicesOverview() {
   ];
 
   return (
-    <section className="py-24 bg-navy-800 relative z-10 border-t border-white/5">
-      <div className="container mx-auto px-6 md:px-12">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+    <section className="py-16 md:py-24 bg-navy-800 relative z-10 border-t border-white/5">
+      <div className="container mx-auto px-4 sm:px-6 md:px-12">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 md:mb-16 gap-4 md:gap-6">
           <div className="max-w-2xl">
             <motion.h2 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-3xl md:text-5xl font-bold mb-4"
+              className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4"
             >
               {language === 'fa' ? <>خدمات <span className="text-gold">تخصصی</span> ما</> : <>Our <span className="text-gold">Expertise</span></>}
             </motion.h2>
@@ -46,7 +46,7 @@ export default function ServicesOverview() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="text-white/60"
+              className="text-white/60 text-sm sm:text-base leading-relaxed"
             >
               {language === 'fa' 
                 ? "ما مجموعه‌ای کامل از خدمات دیجیتال را برای تبدیل ایده‌های شما به واقعیت ارائه می‌دهیم." 
@@ -68,12 +68,12 @@ export default function ServicesOverview() {
               transition={{ duration: 0.4, delay: i * 0.05 }}
             >
               <Link href="/services" className="block h-full">
-                <div className="glass p-6 rounded-2xl hover:glass-gold transition-all duration-300 h-full group">
-                  <div className="text-white/40 group-hover:text-gold transition-colors mb-4 w-10 h-10">
+                <div className="glass p-5 sm:p-6 rounded-2xl hover:glass-gold transition-all duration-300 h-full group">
+                  <div className="text-white/40 group-hover:text-gold transition-colors mb-3 sm:mb-4 w-8 h-8 sm:w-10 sm:h-10">
                     {service.icon}
                   </div>
-                  <h3 className="text-lg font-bold mb-2 text-white/90 group-hover:text-white transition-colors">{service.title}</h3>
-                  <p className="text-white/50 text-sm leading-relaxed">{service.desc}</p>
+                  <h3 className="text-base sm:text-lg font-bold mb-2 text-white/90 group-hover:text-white transition-colors">{service.title}</h3>
+                  <p className="text-white/50 text-[13px] sm:text-sm leading-relaxed">{service.desc}</p>
                 </div>
               </Link>
             </motion.div>

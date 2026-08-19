@@ -28,13 +28,13 @@ export default function ServicesPage() {
   ];
 
   return (
-    <div className="pt-32 pb-24 relative z-10 bg-navy-900 min-h-screen">
-      <div className="container mx-auto px-6 md:px-12">
+    <div className="pt-24 md:pt-32 pb-16 md:pb-24 relative z-10 bg-navy-900 min-h-screen">
+      <div className="container mx-auto px-4 sm:px-6 md:px-12">
         <div className="text-center mb-20 max-w-3xl mx-auto">
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-4xl md:text-6xl font-black mb-6"
+            className="text-3xl sm:text-4xl md:text-6xl font-black mb-4 sm:mb-6"
           >
             {language === 'fa' ? <>خدمات <span className="text-gold">پرمیوم</span> ما</> : <>Our Premium <span className="text-gold">Services</span></>}
           </motion.h1>
@@ -48,23 +48,23 @@ export default function ServicesPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6 }}
-              className={`flex flex-col ${idx % 2 !== 0 ? 'md:flex-row-reverse' : 'md:flex-row'} gap-12 items-center`}
+              className={`flex flex-col ${idx % 2 !== 0 ? 'md:flex-row-reverse' : 'md:flex-row'} gap-8 lg:gap-12 items-start md:items-center`}
             >
               <div className="w-full md:w-1/2">
-                <div className="glass p-12 rounded-3xl flex items-center justify-center aspect-video group hover:shadow-[0_0_30px_rgba(212,175,55,0.15)] transition-shadow">
+                <div className="glass p-8 sm:p-12 rounded-3xl flex items-center justify-center aspect-video group hover:shadow-[0_0_30px_rgba(212,175,55,0.15)] transition-shadow">
                   <div className="text-gold opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500">
                     {srv.icon}
                   </div>
                 </div>
               </div>
-              <div className="w-full md:w-1/2 space-y-6">
-                <h2 className="text-3xl md:text-4xl font-bold">{srv.title}</h2>
-                <p className="text-white/60 text-lg leading-relaxed">{srv.desc}</p>
+              <div className="w-full md:w-1/2 space-y-4 sm:space-y-6">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">{srv.title}</h2>
+                <p className="text-white/60 text-base md:text-lg leading-relaxed">{srv.desc}</p>
                 <div>
-                  <h4 className="text-xl font-bold mb-4">{language === 'fa' ? "مراحل انجام کار:" : "Our Process:"}</h4>
-                  <div className="flex flex-wrap gap-3">
+                  <h4 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">{language === 'fa' ? "مراحل انجام کار:" : "Our Process:"}</h4>
+                  <div className="flex flex-wrap gap-2 sm:gap-3">
                     {srv.process.map((p, i) => (
-                      <span key={i} className="px-4 py-2 rounded-full border border-white/10 bg-white/5 text-white/80 text-sm">
+                      <span key={i} className="px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border border-white/10 bg-white/5 text-white/80 text-[13px] sm:text-sm">
                         {p}
                       </span>
                     ))}

@@ -39,19 +39,19 @@ export default function PortfolioPage() {
   ];
 
   return (
-    <div className="pt-32 pb-24 relative z-10 bg-navy-900 min-h-screen">
-      <div className="container mx-auto px-6 md:px-12">
+    <div className="pt-24 md:pt-32 pb-16 md:pb-24 relative z-10 bg-navy-900 min-h-screen">
+      <div className="container mx-auto px-4 sm:px-6 md:px-12">
         <div className="text-center mb-20">
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-4xl md:text-6xl font-black mb-6"
+            className="text-3xl sm:text-4xl md:text-6xl font-black mb-4 sm:mb-6"
           >
             {language === 'fa' ? <>نمونه‌کارهای <span className="text-gold">برگزیده</span></> : <>Featured <span className="text-gold">Portfolio</span></>}
           </motion.h1>
         </div>
 
-        <div className="space-y-32 mb-32">
+        <div className="space-y-16 md:space-y-32 mb-16 md:mb-32">
           {caseStudies.map((study, idx) => (
             <motion.div 
               key={idx}
@@ -59,11 +59,11 @@ export default function PortfolioPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.8 }}
-              className="glass p-8 md:p-12 rounded-3xl"
+              className="glass p-6 sm:p-8 md:p-12 rounded-3xl"
             >
-              <div className="flex flex-col lg:flex-row gap-12 items-start">
+              <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
                 {/* Visual */}
-                <div className="w-full lg:w-1/2 rounded-2xl overflow-hidden bg-navy-800 shadow-[0_20px_50px_rgba(0,0,0,0.5)] border border-white/5 relative aspect-[4/3] group perspective-[1000px]">
+                <div className="w-full lg:w-1/2 rounded-2xl overflow-hidden bg-navy-800 shadow-[0_20px_50px_rgba(0,0,0,0.5)] border border-white/5 relative aspect-square md:aspect-[4/3] group perspective-[1000px]">
                    <div className="absolute inset-0 bg-gradient-to-t from-navy-900/80 to-transparent z-10"></div>
                    <Image 
                      src={study.img} 
@@ -74,10 +74,10 @@ export default function PortfolioPage() {
                 </div>
 
                 {/* Info */}
-                <div className="w-full lg:w-1/2 space-y-8">
+                <div className="w-full lg:w-1/2 space-y-6 sm:space-y-8">
                   <div>
-                    <span className="text-gold font-medium tracking-wider text-sm uppercase mb-2 block">{study.category}</span>
-                    <h2 className="text-3xl md:text-4xl font-bold">{study.title}</h2>
+                    <span className="text-gold font-medium tracking-wider text-xs sm:text-sm uppercase mb-2 block">{study.category}</span>
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">{study.title}</h2>
                   </div>
                   
                   <div className="space-y-6">
@@ -116,8 +116,8 @@ export default function PortfolioPage() {
 
         {/* Other Projects Placeholder */}
         <div>
-          <h2 className="text-3xl font-bold mb-10 text-center">{language === 'fa' ? "سایر پروژه‌ها" : "Other Projects"}</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-8 sm:mb-10 text-center">{language === 'fa' ? "سایر پروژه‌ها" : "Other Projects"}</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
             {placeholders.map((p, i) => (
               <motion.div 
                 key={i}

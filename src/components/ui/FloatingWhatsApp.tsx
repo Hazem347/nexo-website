@@ -11,8 +11,10 @@ export default function FloatingWhatsApp() {
   // User requested "fixed bottom-right corner", so we can keep it right-aligned.
   // Wait, if RTL, maybe bottom-left is better? Let's keep it fixed bottom-right for both 
   // since most users expect chat widgets there, or adjust based on dir.
-  // Actually, standard is bottom-right for LTR, bottom-left for RTL.
-  const positionClass = dir === "rtl" ? "bottom-6 left-6" : "bottom-6 right-6";
+  // Ensure it doesn't overlap text on mobile, use safe-area
+  const positionClass = dir === "rtl" 
+    ? "bottom-[calc(env(safe-area-inset-bottom,24px)+24px)] left-4 sm:left-6" 
+    : "bottom-[calc(env(safe-area-inset-bottom,24px)+24px)] right-4 sm:right-6";
 
   return (
     <a

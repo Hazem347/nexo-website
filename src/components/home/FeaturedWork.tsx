@@ -73,14 +73,14 @@ export default function FeaturedWork() {
   ];
 
   return (
-    <section className="py-24 bg-navy-900 relative z-10">
-      <div className="container mx-auto px-6 md:px-12">
+    <section className="py-16 md:py-24 bg-navy-900 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 md:px-12">
         <div className="text-center mb-20">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-5xl font-bold mb-4"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4"
           >
             {language === 'fa' ? <>پروژه‌های <span className="text-gold">برگزیده</span></> : <>Featured <span className="text-gold">Work</span></>}
           </motion.h2>
@@ -89,7 +89,7 @@ export default function FeaturedWork() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-white/60 max-w-2xl mx-auto"
+            className="text-white/60 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed"
           >
             {language === 'fa' 
               ? "نگاهی به برخی از برترین پروژه‌هایی که با افتخار برای مشتریان خود خلق کرده‌ایم." 
@@ -97,9 +97,9 @@ export default function FeaturedWork() {
           </motion.p>
         </div>
 
-        <div className="space-y-32">
+        <div className="space-y-20 md:space-y-32">
           {works.map((work, idx) => (
-            <div key={idx} className={`flex flex-col ${work.reverse ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-center gap-12 lg:gap-20`}>
+            <div key={idx} className={`flex flex-col ${work.reverse ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-center gap-8 lg:gap-20`}>
               {/* Image side with 3D tilt */}
               <motion.div 
                 initial={{ opacity: 0, x: work.reverse ? 50 : -50 }}
@@ -129,17 +129,17 @@ export default function FeaturedWork() {
                 transition={{ duration: 0.8, delay: 0.2 }}
                 className="w-full lg:w-1/2"
               >
-                <div className="flex items-center gap-4 mb-4">
+                <div className="flex items-center gap-4 mb-4 mt-4 lg:mt-0">
                   <div className="h-px w-12 bg-gold"></div>
-                  <span className="text-gold font-medium tracking-wider text-sm uppercase">{work.category}</span>
+                  <span className="text-gold font-medium tracking-wider text-xs sm:text-sm uppercase">{work.category}</span>
                 </div>
-                <h3 className="text-3xl md:text-4xl font-bold mb-6">{work.title}</h3>
-                <p className="text-white/60 text-lg leading-relaxed mb-8">
+                <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">{work.title}</h3>
+                <p className="text-white/60 text-base md:text-lg leading-relaxed mb-6 sm:mb-8">
                   {work.desc}
                 </p>
                 <Link 
                   href={work.link}
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-white/20 hover:border-gold hover:bg-gold/10 transition-all text-white hover:text-gold group"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-white/20 hover:border-gold hover:bg-gold/10 transition-all text-white hover:text-gold group text-sm sm:text-base w-fit"
                 >
                   {language === 'fa' ? "مشاهده پروژه" : "View Case Study"}
                   <ArrowUpRight size={18} className={`group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform ${dir === 'rtl' ? 'rotate-[-90deg] group-hover:-translate-x-1' : ''}`} />
@@ -149,7 +149,7 @@ export default function FeaturedWork() {
           ))}
         </div>
 
-        <div className="mt-32 text-center">
+        <div className="mt-20 md:mt-32 text-center">
           <Link 
             href="/portfolio"
             className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-white/5 border border-white/10 hover:border-gold/50 hover:bg-white/10 transition-all font-medium"

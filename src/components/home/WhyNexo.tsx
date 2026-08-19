@@ -20,14 +20,14 @@ export default function WhyNexo() {
   ];
 
   return (
-    <section className="py-24 relative z-10 bg-navy-900">
-      <div className="container mx-auto px-6 md:px-12">
+    <section className="py-16 md:py-24 relative z-10 bg-navy-900">
+      <div className="container mx-auto px-4 sm:px-6 md:px-12">
         <div className="text-center mb-16">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-5xl font-bold mb-4"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4"
           >
             {language === 'fa' ? <>چرا <span className="text-gold">NEXO</span></> : <>Why Choose <span className="text-gold">NEXO</span></>}
           </motion.h2>
@@ -36,7 +36,7 @@ export default function WhyNexo() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-white/60 max-w-2xl mx-auto"
+            className="text-white/60 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed"
           >
             {language === 'fa' 
               ? "ما فقط وب‌سایت نمی‌سازیم؛ ما تجربیات دیجیتالی خلق می‌کنیم که باعث رشد، تعامل و نتیجه واقعی می‌شوند." 
@@ -52,13 +52,13 @@ export default function WhyNexo() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="glass p-8 rounded-2xl hover:glass-gold transition-all duration-300 group"
+              className="glass p-6 sm:p-8 rounded-2xl hover:glass-gold transition-all duration-300 group"
             >
-              <div className="w-16 h-16 rounded-full bg-white/5 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-gold/10 transition-transform duration-300 shadow-[0_0_15px_rgba(255,255,255,0.05)] group-hover:shadow-[0_0_20px_rgba(212,175,55,0.2)]">
+              <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white/5 flex items-center justify-center mb-5 sm:mb-6 group-hover:scale-110 group-hover:bg-gold/10 transition-transform duration-300 shadow-[0_0_15px_rgba(255,255,255,0.05)] group-hover:shadow-[0_0_20px_rgba(212,175,55,0.2)]">
                 {feat.icon}
               </div>
-              <h3 className="text-xl font-bold mb-3 group-hover:text-gold transition-colors">{feat.title}</h3>
-              <p className="text-white/60 text-sm leading-relaxed">{feat.desc}</p>
+              <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 group-hover:text-gold transition-colors">{feat.title}</h3>
+              <p className="text-white/60 text-[13px] sm:text-sm leading-relaxed">{feat.desc}</p>
             </motion.div>
           ))}
         </div>

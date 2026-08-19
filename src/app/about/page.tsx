@@ -21,20 +21,20 @@ export default function AboutPage() {
   ];
 
   return (
-    <div className="pt-32 pb-24 relative z-10 bg-navy-900 min-h-screen">
-      <div className="container mx-auto px-6 md:px-12">
+    <div className="pt-24 md:pt-32 pb-16 md:pb-24 relative z-10 bg-navy-900 min-h-screen">
+      <div className="container mx-auto px-4 sm:px-6 md:px-12">
         {/* Story Section */}
-        <div className="flex flex-col lg:flex-row gap-16 items-center mb-32">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center mb-20 md:mb-32">
           <motion.div 
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="w-full lg:w-1/2"
+            className="w-full lg:w-1/2 text-center lg:text-start"
           >
-            <h1 className="text-4xl md:text-6xl font-black mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-black mb-4 sm:mb-6">
               {language === 'fa' ? <>داستان <span className="text-gold">NEXO</span></> : <>The <span className="text-gold">NEXO</span> Story</>}
             </h1>
-            <div className="space-y-6 text-white/70 text-lg leading-relaxed">
+            <div className="space-y-4 sm:space-y-6 text-white/70 text-base md:text-lg leading-relaxed text-start">
               <p>
                 {language === 'fa' 
                   ? "نکسو (NEXO) تنها یک آژانس دیجیتال نیست؛ ما شریک استراتژیک شما در مسیر تحول دیجیتال هستیم. هدف ما ارائه خدمات پرمیوم و در سطح جهانی برای کسب‌وکارهای افغانستان و منطقه است تا بتوانند در دنیای پررقابت امروز به بهترین شکل دیده شوند." 
@@ -72,18 +72,18 @@ export default function AboutPage() {
 
         {/* Values Grid */}
         <div>
-          <div className="text-center mb-16">
+          <div className="text-center mb-12 md:mb-16">
             <motion.h2 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-3xl md:text-5xl font-bold mb-4"
+              className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4"
             >
               {language === 'fa' ? <>ارزش‌های <span className="text-gold">بنیادین</span> ما</> : <>Our Core <span className="text-gold">Values</span></>}
             </motion.h2>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {values.map((val, i) => (
               <motion.div 
                 key={i}
@@ -91,13 +91,13 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="glass p-8 rounded-2xl text-center hover:-translate-y-2 transition-transform duration-300"
+                className="glass p-6 sm:p-8 rounded-2xl text-center hover:-translate-y-2 transition-transform duration-300"
               >
-                <div className="w-16 h-16 mx-auto rounded-full bg-white/5 flex items-center justify-center mb-6">
+                <div className="w-14 h-14 sm:w-16 sm:h-16 mx-auto rounded-full bg-white/5 flex items-center justify-center mb-4 sm:mb-6">
                   {val.icon}
                 </div>
-                <h3 className="text-xl font-bold mb-3">{val.title}</h3>
-                <p className="text-white/60 text-sm leading-relaxed">{val.desc}</p>
+                <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">{val.title}</h3>
+                <p className="text-white/60 text-[13px] sm:text-sm leading-relaxed">{val.desc}</p>
               </motion.div>
             ))}
           </div>
