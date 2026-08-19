@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy-900: #050B14;
+  --color-navy-800: #0A1628;
+  --color-navy-700: #0F203C;
+  --color-navy-600: #152A50;
+  --color-navy: #1A365D;
+  
+  --color-gold-600: #B8972E;
+  --color-gold-500: #D4AF37;
+  --color-gold-400: #E6C65C;
+  --color-gold: #D4AF37;
+
+  --color-background: var(--color-navy-900);
+  --color-foreground: #F8FAFC;
+  
+  --font-sans: var(--font-outfit), var(--font-vazirmatn), sans-serif;
+}
+
+:root {
+  --background: var(--color-navy-900);
+  --foreground: #F8FAFC;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body[dir="rtl"] {
+  font-family: var(--font-vazirmatn), var(--font-outfit), sans-serif;
+}
+
+/* Utilities for glassmorphism */
+@utility glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+@utility glass-gold {
+  background: rgba(212, 175, 55, 0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
